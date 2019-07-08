@@ -1,4 +1,4 @@
-package br.com.caelum.empresa.modelo;
+package br.com.caelum.empresa.leitor;
 
 import java.io.InputStream;
 import java.text.ParseException;
@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Scanner;
+
+import br.com.caelum.empresa.modelo.Funcionario;
+import br.com.caelum.empresa.modelo.Gasto;
 
 public class Importador {
 	public List<Gasto> importa(InputStream entrada) throws ParseException {
