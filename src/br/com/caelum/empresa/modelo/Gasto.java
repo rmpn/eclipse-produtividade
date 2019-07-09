@@ -8,7 +8,7 @@ public class Gasto {
 	private String tipo;
 	private Funcionario funcionario;
 	private Calendar data;
-    private  boolean pagoEmDinheiro;
+    
     
 	public Gasto(double valor, String tipo, Funcionario funcionario, Calendar data) {
 		super();
@@ -50,17 +50,36 @@ public class Gasto {
 		this.data = data;
 	}
 
-	public boolean isPagoEmDinheiro() {
-		return pagoEmDinheiro;
-	}
 
-	public void setPagoEmDinheiro(boolean pagoEmDinheiro) {
-		this.pagoEmDinheiro = pagoEmDinheiro;
-	}
 
 	@Override
 	public String toString() {
-		return "Gasto [tipo=" + tipo + ", funcionario=" + funcionario + ", data=" + data + "]";
+		return  tipo +" do " + funcionario;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((funcionario == null) ? 0 : funcionario.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Gasto other = (Gasto) obj;
+		if (funcionario == null) {
+			if (other.funcionario != null)
+				return false;
+		} else if (!funcionario.equals(other.funcionario))
+			return false;
+		return true;
 	}
 	
 	

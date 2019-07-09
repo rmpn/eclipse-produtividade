@@ -3,20 +3,23 @@ package br.com.caelum.empresa.leitor;
 import java.io.InputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
+import java.util.Collection;
+import java.util.LinkedHashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 import br.com.caelum.empresa.modelo.Funcionario;
 import br.com.caelum.empresa.modelo.Gasto;
 
 public class Importador {
-	public List<Gasto> importa(InputStream entrada) throws ParseException {
-		
+	public Collection<Gasto> importa(InputStream entrada) throws ParseException {
+	
+	
 		Scanner leitor = new Scanner(entrada);
-		List<Gasto> gastos = new ArrayList<Gasto>();
-		
+		//List<Gasto> gastos = new ArrayList<Gasto>();
+		Set<Gasto> gastos = new LinkedHashSet();
+		// TODO para algo que precisa ser feito.
 		while (leitor.hasNextLine()) {
 			
 			String line = leitor.nextLine();
