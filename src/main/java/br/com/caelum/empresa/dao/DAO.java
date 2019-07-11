@@ -33,6 +33,7 @@ public class DAO<T> {
 	    return entityManager.find(classe, id);
 	}
 
+	
 	public List<T> buscaTodos() {
 	    Query query = entityManager.createQuery("from " + classe.getName());
 	    return query.getResultList();
