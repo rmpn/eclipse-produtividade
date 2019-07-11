@@ -12,7 +12,9 @@ import java.util.Set;
 import br.com.caelum.empresa.modelo.Funcionario;
 import br.com.caelum.empresa.modelo.Gasto;
 
-public class Importador {
+public class ImportadorDeGastos {
+	
+	
 	public Collection<Gasto> importa(InputStream entrada) throws ParseException {
 	
 	
